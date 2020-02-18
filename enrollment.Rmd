@@ -1,0 +1,39 @@
+---
+title: "enrollment"
+author: "Gabe Cederberg"
+date: "2/18/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(janitor)
+library(gt)
+library(tidyverse)
+library(readxl)
+library(reprex)
+```
+
+```{r}
+x <- read_excel(path = "~/Desktop/Projects/enrollment/class_enrollment_summary_by_term2.18.20.xlsx", 
+           skip = 3)
+
+y <- x %>% 
+  clean_names()
+
+y
+```
+
+```{r}
+z <- y %>% 
+  group_by(course_department) %>% 
+  filter( !is.na(course_name)) %>% 
+  summarize(total_enroll = sum(total)) %>% 
+  arrange(desc(total_enroll)) %>% 
+  head(5)
+
+z
+
+
+```
+
