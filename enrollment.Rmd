@@ -21,7 +21,7 @@ x <- read_excel(path = "~/Desktop/Projects/enrollment/class_enrollment_summary_b
 y <- x %>% 
   clean_names()
 
-y
+y 
 ```
 
 ```{r}
@@ -35,5 +35,15 @@ z <- y %>%
 z
 
 
+#HOW to make a runoff comment look nicdss d sfdf sd f sd f sdf sd f sd f HOW to
+#make a runoff comment look nicdss d sfdf sd f sd f sdf sd f sd f
+
+k <- read_excel("class_enrollment_summary_by_term_3.22.19_0.xlsx", skip = 3) %>% 
+    clean_names()
+
+v <- y %>% 
+  anti_join(k, by = 'course_department')
+
+v
 ```
 

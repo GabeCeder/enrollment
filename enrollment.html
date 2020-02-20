@@ -375,7 +375,7 @@ summary {
 y &lt;- x %&gt;% 
   clean_names()
 
-y</code></pre>
+y </code></pre>
 <pre><code>## # A tibble: 2,908 x 14
 ##    course_id course_title course_name course_section_… course_departme…
 ##    &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;           
@@ -408,6 +408,32 @@ z</code></pre>
 ## 3 Computer Science          1852
 ## 4 Mathematics               1753
 ## 5 Government                1734</code></pre>
+<pre class="r"><code>#HOW to make a runoff comment look nicdss d sfdf sd f sd f sdf sd f sd f HOW to
+#make a runoff comment look nicdss d sfdf sd f sd f sdf sd f sd f
+
+k &lt;- read_excel(&quot;class_enrollment_summary_by_term_3.22.19_0.xlsx&quot;, skip = 3) %&gt;% 
+    clean_names()
+
+v &lt;- y %&gt;% 
+  anti_join(k, by = 'course_department')
+
+v</code></pre>
+<pre><code>## # A tibble: 43 x 14
+##    course_id course_title course_name course_section_… course_departme…
+##    &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;           
+##  1 213509    AFVS 118C    Curating C… 1                Art, Film, and …
+##  2 203312    AFVS 12      Drawing 1:  1                Art, Film, and …
+##  3 119644    AFVS 123R    Post Brush… 1                Art, Film, and …
+##  4 203463    AFVS 132R    Object Mat… 1                Art, Film, and …
+##  5 207855    AFVS 143     Difficult … 1                Art, Film, and …
+##  6 113516    AFVS 150B    True Ficti… 001              Art, Film, and …
+##  7 117216    AFVS 152R    Intermedia… 1                Art, Film, and …
+##  8 215412    AFVS 156S    Documentar… 1                Art, Film, and …
+##  9 213474    AFVS 157G    Sound and … 1                Art, Film, and …
+## 10 123220    AFVS 158AR   Sensory Et… 1                Art, Film, and …
+## # … with 33 more rows, and 9 more variables: instructor_full_name &lt;chr&gt;,
+## #   u_grad &lt;dbl&gt;, grad &lt;dbl&gt;, non_degree &lt;dbl&gt;, x_reg &lt;dbl&gt;, vus &lt;dbl&gt;,
+## #   employee &lt;dbl&gt;, withdraw &lt;dbl&gt;, total &lt;dbl&gt;</code></pre>
 
 
 
